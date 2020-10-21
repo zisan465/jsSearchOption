@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> 
+    <style>
+     *{
+         margin: 0;
+         padding: 0;
+     }
+   
+ </style>
+</head>
+<body>
+<section>
+    <div class="table-box">
+        <h1 class="text-center p-4">Learn Search</h1>
+        <input type="text" id="myinput" class="form-control w-75 m-auto" placeholder="Search..">
+        <table class="table table-success table-hover text-center table-bordered w-75 m-auto" id="mytable">
+            <thead class="thead-dark">
+            <tr>
+                <th>Name</th>
+                <th>Roll</th>
+                <th>Year</th>
+                <th>College</th>
+            </tr>
+            </thead>
+            <tr>
+                <td>Zisan</td>
+                <td>2654</td>
+                <td>1st Year</td>
+                <td>A. Rouf Degree College</td>
+            </tr>
+            <tr>
+                <td>Mamun</td>
+                <td>2654</td>
+                <td>1st Year</td>
+                <td>A. Rouf Degree College</td>
+            </tr>
+            <tr>
+                <td>asik</td>
+                <td>2654</td>
+                <td>1st Year</td>
+                <td>A. Rouf Degree College</td>
+            </tr>
+            <tr>
+                <td>sizan</td>
+                <td>2654</td>
+                <td>1st Year</td>
+                <td>A. Rouf Degree College</td>
+            </tr>
+            <tr>
+                <td>rahul</td>
+                <td>2654</td>
+                <td>1st Year</td>
+                <td>A. Rouf Degree College</td>
+            </tr>
+            <tr>
+                <td>ontor</td>
+                <td>2654</td>
+                <td>1st Year</td>
+                <td>A. Rouf Degree College</td>
+            </tr>
+            <tr>
+                <td>ruhul</td>
+                <td>2654</td>
+                <td>1st Year</td>
+                <td>A. Rouf Degree College</td>
+            </tr>
+            <tr>
+                <td>korim</td>
+                <td>2654</td>
+                <td>1st Year</td>
+                <td>A. Rouf Degree College</td>
+            </tr>
+            <tr>
+                <td>sadam</td>
+                <td>2654</td>
+                <td>1st Year</td>
+                <td>A. Rouf Degree College</td>
+            </tr>
+            <tr>
+                <td>moklesh</td>
+                <td>2654</td>
+                <td>1st Year</td>
+                <td>A. Rouf Degree College</td>
+            </tr>
+            <tr>
+                <td>kuddush</td>
+                <td>2654</td>
+                <td>1st Year</td>
+                <td>A. Rouf Degree College</td>
+            </tr>
+            <tr>
+                <td>tamanna</td>
+                <td>2654</td>
+                <td>1st Year</td>
+                <td>A. Rouf Degree College</td>
+            </tr>
+            <tr>
+                <td>tania</td>
+                <td>2654</td>
+                <td>1st Year</td>
+                <td>A. Rouf Degree College</td>
+            </tr>
+            <tr>
+                <td>masum</td>
+                <td>2654</td>
+                <td>1st Year</td>
+                <td>A. Rouf Degree College</td>
+            </tr>
+            <tr>
+                <td>tarif</td>
+                <td>2654</td>
+                <td>1st Year</td>
+                <td>A. Rouf Degree College</td>
+            </tr>
+            <tr>
+                <td>pintu</td>
+                <td>2654</td>
+                <td>1st Year</td>
+                <td>A. Rouf Degree College</td>
+            </tr>
+            </tr>
+        </table>
+    </div>
+</section>
+
+<script>
+  
+
+  document.getElementById("myinput").addEventListener("keyup",function(){
+    var myinput=document.getElementById("myinput").value.toUpperCase().trim();
+    
+    let tr=document.getElementById("mytable").getElementsByTagName("tr");
+    
+
+    for(var i=1; i < tr.length;i++){
+        let td= tr[i].getElementsByTagName("td")[0].innerText.toUpperCase();
+        
+        if(td.indexOf(myinput)>-1){
+            tr[i].style.display=""
+        }else{
+            tr[i].style.display="none";
+        }
+
+    }
+
+  });
+
+
+</script>
+    
+
+</body>
+</html>
