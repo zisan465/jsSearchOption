@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HTML</title>
+  <style>
+    *{  
+      margin: 0;
+      padding: 0;
+    }
+    .box{
+      position: fixed;
+      width: 200px;
+      height: 200px;
+      background-color: red;
+    }
+  </style>
+</head>
+
+<body onmousemove="zisan()">
+
+<div class="box" onclick="zisan()"></div>
+
+  <script>
+    function zisan(){
+      var wow=document.querySelector(".box");
+      var x = event.clientX;
+      var y = event.clientY;
+      
+      wow.style.top= y+"px";
+      wow.style.left= x+"px";
+      console.log(x+" "+y);
+
+    }
+   
+
+  </script>
+</body>
+</html>
